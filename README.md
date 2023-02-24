@@ -35,8 +35,21 @@ activate dmodel
 conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
 pip install ninja imageio PyOpenGL glfw xatlas gdown
 pip install git+https://github.com/NVlabs/nvdiffrast/
+
 pip install --global-option="--no-networks" git+https://github.com/NVlabs/tiny-cuda-nn#subdirectory=bindings/torch
 imageio_download_bin freeimage
+```
+
+Installation may be failed of connectiion time out. On the case, you need run command as follows:
+
+At first, add your libcuda.so path in LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+
+Then:
+```
+git clone --recursive https://github.com/NVlabs/tiny-cuda-nn
+cd bindings/torch
+pip3 install .
 ```
 
 ### Every new command prompt
