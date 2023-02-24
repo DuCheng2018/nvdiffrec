@@ -42,10 +42,9 @@ imageio_download_bin freeimage
 
 Installation may be failed of connectiion time out. On the case, you need run command as follows:
 
-At first, add your libcuda.so path in LD_LIBRARY_PATH:
+At first, add your libcuda.so path in LD_LIBRARY_PATH, using /usr/lib as example.
 ```
 export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
-
 ```
 
 Then:
